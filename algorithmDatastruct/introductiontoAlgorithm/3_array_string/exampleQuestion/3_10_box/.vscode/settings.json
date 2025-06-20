@@ -1,0 +1,77 @@
+{
+    "editor.fontSize": 18,
+    "explorer.confirmDelete": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "debug.onTaskErrors": "showErrors",
+    "cmake.showOptionsMovedNotification": false,
+    "database-client.autoSync": true,
+    "extensions.autoUpdate": false,
+    "files.autoGuessEncoding": true,
+    "terminal.explorerKind": "external",
+    "workbench.settings.applyToAllProfiles": [
+        "editor.fontSize"
+    ],
+    "window.zoomLevel": 0.3,
+    "C_Cpp.default.compilerPath": "C:/MinGW/bin/gcc.exe",
+    "labuladong-leetcode.workspaceFolder": "D:\\vscodeLeetcode\\lc-plugin-template\\cpp-template",
+    "labuladong-leetcode.endpoint": "leetcode-cn",
+    "labuladong-leetcode.hint.configWebviewMarkdown": false,
+    "labuladong-leetcode.defaultLanguage": "cpp",
+    "labuladong-leetcode.filePath": {
+    "python": {
+        "folder": "leetcode/editor/${endpointType}",
+        "filename": "${kebab-case-name}.${ext}"
+    },
+    "python3": {
+        "folder": "leetcode/editor/${endpointType}",
+        "filename": "${kebab-case-name}.${ext}"
+    },
+    "javascript": {
+        "folder": "leetcode/editor/${endpointType}",
+        "filename": "${kebab-case-name}.${ext}"
+    },
+    "cpp": {
+        "folder": "leetcode/editor/${endpointType}",
+        "filename": "${kebab-case-name}.${ext}"
+    },
+    "golang": {
+        "folder": "leetcode/editor/${endpointType}",
+        "filename": "${snake_case_name}_test.${ext}"
+    },
+    "java": {
+        "folder": "src/main/java/leetcode/editor/${endpointType}",
+        "filename": "${PascalCaseName}.${ext}"
+    },
+    "default": {
+        "folder": "",
+        "filename": "${id}.${kebab-case-name}.${ext}"
+    }
+},
+"labuladong-leetcode.customCodeTemplate": "\\#include <iostream>\n\\#include <vector>\n\\#include <string>\n\\#include \"../common/ListNode.cpp\"\n\\#include \"../common/TreeNode.cpp\"\n\nusing namespace std;\n\n${question.code}\n\nint main() {\n    Solution solution;\n    // your test code here\n}\n\n\n",
+"labuladong-leetcode.hint.commentDescription": false,
+"diffEditor.ignoreTrimWhitespace": false,
+"diffEditor.hideUnchangedRegions.enabled": true,
+"editor.minimap.size": "fill",
+"workbench.editor.editorActionsLocation": "hidden",
+"redhat.telemetry.enabled": true,
+"java.templates.fileHeader": [
+
+],
+"fileTemplates.templates": [
+    {
+      "name": "C++ Project (.vscode)",
+      "description": "Create .vscode folder with C++ configurations",
+      "path": "${workspaceFolder}/.vscode",
+      "files": [
+        {
+          "name": "tasks.json",
+          "content": "{\n  \"version\": \"2.0.0\",\n  \"tasks\": [\n    {\n      \"type\": \"cppbuild\",\n      \"label\": \"C/C++: g++ build active file\",\n      \"command\": \"g++\",\n      \"args\": [\n        \"-g\",\n        \"${file}\",\n        \"-o\",\n        \"${fileDirname}/${fileBasenameNoExtension}.exe\"\n      ],\n      \"problemMatcher\": [\n        \"$gcc\"\n      ],\n      \"group\": {\n        \"kind\": \"build\",\n        \"isDefault\": true\n      }\n    }\n  ]\n}"
+        },
+        {
+          "name": "launch.json",
+          "content": "{\n  \"version\": \"0.2.0\",\n  \"configurations\": [\n    {\n      \"name\": \"g++.exe - Build and debug active file\",\n      \"type\": \"cppdbg\",\n      \"request\": \"launch\",\n      \"program\": \"${fileDirname}/${fileBasenameNoExtension}.exe\",\n      \"args\": [],\n      \"stopAtEntry\": false,\n      \"cwd\": \"${fileDirname}\",\n      \"environment\": [],\n      \"externalConsole\": false,\n      \"MIMode\": \"gdb\",\n      \"miDebuggerPath\": \"gdb.exe\",\n      \"setupCommands\": [\n        {\n          \"description\": \"Enable pretty-printing for gdb\",\n          \"text\": \"-enable-pretty-printing\",\n          \"ignoreFailures\": true\n        }\n      ],\n      \"preLaunchTask\": \"C/C++: g++ build active file\"\n    }\n  ]\n}"
+        }
+      ]
+    }
+  ]
+}
